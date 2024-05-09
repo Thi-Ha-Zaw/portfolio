@@ -9,7 +9,8 @@ export default {
       fontFamily: {
         roboto_slab : ["Roboto Slab", "serif"],
         roboto_serif : ["Roboto Serif", "serif"],
-        roboto_condensed : ["Roboto Condensed", "sans-serif"],
+        roboto_condensed: ["Roboto Condensed", "sans-serif"],
+        open_sans : ["Roboto", "sans-serif"]
       }
     },
   },
