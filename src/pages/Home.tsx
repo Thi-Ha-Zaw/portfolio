@@ -1,11 +1,13 @@
+import Heading from "../components/text/Heading";
 import { Globe } from "../core/Globe";
+import Project from "./Project";
 
 type Props = {};
 
 const Home = (props: Props) => {
     return (
         <div>
-            <div className=" lg:w-1/2 flex flex-col w-full h-screen px-4 sm:px-20 sticky lg:fixed lg:z-10 top-0 bg-gray-50 dark:bg-gray-900">
+            <div className=" lg:w-1/2 flex flex-col w-full h-screen px-4 sm:px-20 sticky lg:fixed lg:z-10 top-0 bg-gray-50 dark:bg-gray-800">
                 <div className=" flex h-full items-center ">
                     <div className=" flex flex-col gap-8">
                         <div>
@@ -30,14 +32,13 @@ const Home = (props: Props) => {
                             </button>
                         </div>
                     </div>
-                    
                 </div>
                 {/* <div className=" mt-auto mb-20">
                     <p>Find me at twitter,github and linkin</p>
                     <p>Downlad my resume</p>
                 </div> */}
             </div>
-            <div className=" w-full h-screen sticky top-0 bg-gray-50 dark:bg-gray-800 flex justify-end">
+            <div className=" w-full h-screen sticky top-0 bg-gray-800 dark:bg-gray-900 flex justify-end">
                 <div className="lg:w-1/2 w-full">
                     <Globe />
                 </div>
@@ -46,9 +47,7 @@ const Home = (props: Props) => {
                 <div className="lg:w-1/2 w-full">
                     <div className=" p-20">
                         <div className=" flex gap-8 flex-col">
-                            <h1 className=" text-3xl font-[500] font-roboto_condensed">
-                                About me
-                            </h1>
+                            <Heading title="About me" />
                             <p className=" text-lg leading-7 font-[450] font-roboto_slab">
                                 One of the aspects of development that excites
                                 me the most is problem-solving. I enjoy tackling
@@ -90,8 +89,12 @@ const Home = (props: Props) => {
                     </div>
                 </div>
             </div>
-            <div className=" w-full h-screen sticky top-0 bg-gray-900 flex justify-end">
-                <div className="lg:w-1/2 w-full">page 4</div>
+            <div className=" w-full min-h-screen overflow-auto sticky top-0 bg-gray-900 flex justify-end">
+                <div className="lg:w-1/2 w-full h-screen">
+                    <div className="px-20 pt-10">
+                        <Project />
+                    </div>
+                </div>
             </div>
         </div>
     );
