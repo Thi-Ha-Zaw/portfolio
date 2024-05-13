@@ -1,6 +1,6 @@
-import Heading from "../components/text/Heading";
 import { HoverEffect } from "../components/ui/card-hover-effect";
 import AddToCart from "../images/add-to-cart.png";
+import TodoApp from "../images/todoapp.png";
 
 const projects = [
     {
@@ -11,11 +11,11 @@ const projects = [
         link: "https://stripe.com",
     },
     {
-        title: "Netflix",
+        title: "Todoapp",
         description:
-            "A streaming service that offers a wide variety of award-winning TV shows, movies.",
-        image: AddToCart,
-        link: "https://netflix.com",
+            "A platform that services your daily tasks have to be noted.",
+        image: TodoApp,
+        link: "https://react-todoapp-tsx.netlify.app",
     },
     {
         title: "Google",
