@@ -35,9 +35,9 @@ const projects = [
 
 const Project = () => {
     return (
-        <div>
+        <div className="">
             <div>
-                <h1 className=" text-3xl font-[500] font-roboto_condensed text-gray-300">
+                <h1 className=" ps-5 sm:ps-0 text-3xl font-[500] font-roboto_condensed text-gray-300">
                     Projects
                 </h1>
             </div>
