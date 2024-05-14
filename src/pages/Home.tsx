@@ -5,6 +5,7 @@ import Heading from "../components/text/Heading";
 import Project from "./Project";
 import Lottie from "lottie-react";
 import developerAnimation from "../data/dev-1.json";
+import Contact from "./Contact";
 
 type Props = {};
 
@@ -113,6 +114,13 @@ const Home = (props: Props) => {
                 <div className="lg:w-1/2 w-full ">
                     <div className=" px-0 sm:px-20 pt-10 sm:pt-20 ">
                         <Project />
+                    </div>
+                </div>
+            </div>
+            <div className=" w-full min-h-screen h-screen sticky top-0 bg-white flex justify-end">
+                <div className="lg:w-1/2 w-full ">
+                    <div className=" p-5 sm:p-20 ">
+                       <Contact />
                     </div>
                 </div>
             </div>
