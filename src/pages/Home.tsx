@@ -11,20 +11,20 @@ type Props = {};
 
 const Home = (props: Props) => {
     return (
-        <div>
-            <div className=" lg:w-1/2 flex flex-col w-full h-screen px-4 sm:px-20 sticky lg:fixed lg:z-10 top-0 bg-gray-800 ">
+        <>
+            <section className=" lg:w-1/2 flex flex-col w-full h-screen px-4 sm:px-20 sticky lg:fixed lg:z-10 top-0 bg-gray-800 ">
                 <div className=" flex h-full items-center ">
                     <div className=" flex flex-col gap-9">
                         <div>
-                            <p className="text-gray-50 tracking-wide  text-4xl sm:text-5xl lg:text-[43px] font-bold font-roboto_slab">
+                            <p className="text-gray-50 animate__animated animate__fadeInLeft tracking-wide  text-4xl sm:text-5xl lg:text-[43px] font-bold font-roboto_slab">
                                 Hello. I'm a freelance web
                             </p>
-                            <p className="text-gray-50 tracking-wide   text-4xl sm:text-5xl lg:text-[43px] font-bold font-roboto_slab mt-2">
+                            <p className="text-gray-50 animate__animated animate__fadeInLeft tracking-wide   text-4xl sm:text-5xl lg:text-[43px] font-bold font-roboto_slab mt-2">
                                 app developer
                             </p>
                         </div>
                         <div className=" ">
-                            <p className=" font-roboto_condensed text-gray-300 tracking-wide">
+                            <p className=" animate__animated animate__fadeInLeft font-roboto_condensed text-gray-300 tracking-wide">
                                 My name is Thi Ha Zaw. I create beautiful web
                                 apps using
                                 <br />
@@ -32,12 +32,12 @@ const Home = (props: Props) => {
                             </p>
                         </div>
                         <div className=" mt-1">
-                            <button className=" border shadow-sm shadow-gray-50 bg-gray-800 text-gray-300 border-gray-700 px-6 py-2 rounded-full">
+                            <button className=" animate__animated animate__fadeInLeft border shadow-sm shadow-gray-50 bg-gray-800 text-gray-300 border-gray-700 px-6 py-2 rounded-full">
                                 Let's work together!
                             </button>
                         </div>
                         <div>
-                            <div className=" flex gap-3 items-center">
+                            <div className=" flex gap-3 items-center animate__animated animate__fadeInLeft">
                                 <a href="https://github.com/Thi-Ha-Zaw">
                                     <FaGithub className=" text-gray-50 text-xl" />
                                 </a>
@@ -47,24 +47,25 @@ const Home = (props: Props) => {
                                 <a href="https://www.linkedin.com/in/thi-ha-zaw-69a822270">
                                     <FaLinkedin className=" text-gray-50 text-xl" />
                                 </a>
-                                <a href="">
+                                <a href="mailto:thzaw4321@gmail.com">
                                     <IoMail className=" text-gray-50 text-[23px]" />
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
-                {/* <div className=" mt-auto mb-20">
-                    <p>Find me at twitter,github and linkin</p>
-                    <p>Downlad my resume</p>
-                </div> */}
-            </div>
-            <div className=" w-full h-screen sticky top-0 flex justify-end bg-white">
+            </section>
+            <section className=" w-full h-screen sticky top-0 flex justify-end bg-white ">
                 <div className="lg:w-1/2 w-full pt-32">
-                    <Lottie animationData={developerAnimation} loop={true} />
+                    <div className=" animate__animated animate__fadeIn">
+                        <Lottie
+                            animationData={developerAnimation}
+                            loop={true}
+                        />
+                    </div>
                 </div>
-            </div>
-            <div className=" w-full h-screen sticky top-0 bg-gray-50 flex justify-end">
+            </section>
+            <section className=" w-full h-screen sticky top-0 bg-gray-50 flex justify-end">
                 <div className="lg:w-1/2 w-full">
                     <div className=" p-5 sm:p-20">
                         <div className=" flex gap-8 flex-col">
@@ -109,22 +110,22 @@ const Home = (props: Props) => {
                         </div>
                     </div>
                 </div>
-            </div>
-            <div className=" w-full min-h-screen h-screen sticky top-0 bg-gray-900 flex justify-end">
+            </section>
+            <section className=" w-full min-h-screen h-screen sticky top-0 bg-gray-900 flex justify-end">
                 <div className="lg:w-1/2 w-full ">
                     <div className=" px-0 sm:px-20 pt-10 sm:pt-20 ">
                         <Project />
                     </div>
                 </div>
-            </div>
-            <div className=" w-full min-h-screen h-screen sticky top-0 bg-white flex justify-end">
+            </section>
+            <section className=" w-full min-h-screen h-screen sticky top-0 bg-white flex justify-end">
                 <div className="lg:w-1/2 w-full ">
                     <div className=" p-5 sm:p-20 ">
-                       <Contact />
+                        <Contact />
                     </div>
                 </div>
-            </div>
-        </div>
+            </section>
+        </>
     );
 };
 
