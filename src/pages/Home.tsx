@@ -1,15 +1,20 @@
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { IoMail } from "react-icons/io5";
 
+import { EmblaOptionsType } from "embla-carousel";
 import Heading from "../components/text/Heading";
 import Project from "./Project";
 import Lottie from "lottie-react";
 import developerAnimation from "../data/dev-1.json";
 import Contact from "./Contact";
+import EmblaCarousel from "../components/carousel/EmblaCarousel";
 
 type Props = {};
 
 const Home = (props: Props) => {
+    const OPTIONS: EmblaOptionsType = { loop: true };
+    const SLIDE_COUNT = 5;
+    const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
     return (
         <>
             <section className=" lg:w-1/2 flex flex-col w-full h-screen px-4 sm:px-20 sticky lg:fixed lg:z-10 top-0 bg-gray-800 ">
@@ -116,6 +121,7 @@ const Home = (props: Props) => {
                     <div className=" px-0 sm:px-20 pt-10 sm:pt-20 ">
                         <Project />
                     </div>
+                   
                 </div>
             </section>
             <section className=" w-full min-h-screen h-screen sticky top-0 bg-white flex justify-end">

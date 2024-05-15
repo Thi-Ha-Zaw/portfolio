@@ -12,6 +12,7 @@
   "dependencies": {
     "animate.css": "^4.1.1",
     "clsx": "^2.1.1",
+    "embla-carousel-react": "^8.0.4",
     "framer-motion": "^11.1.9",
     "lottie-react": "^2.4.0",
     "react": "^18.2.0",
