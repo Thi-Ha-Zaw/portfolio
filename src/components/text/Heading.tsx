@@ -5,7 +5,7 @@ type Props = {
 
 const Heading = ({title}: Props) => {
     return (
-        <h1 className=" text-3xl font-[500] font-roboto_condensed"> {title} </h1>
+        <h1 className=" text-3xl font-[500] font-roboto_condensed text-gray-50"> {title} </h1>
     );
 };
 

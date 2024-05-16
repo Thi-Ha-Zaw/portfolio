@@ -11,10 +11,16 @@ import EmblaCarousel from "../components/carousel/EmblaCarousel";
 
 type Props = {};
 
+export type Project = {
+    src: string;
+    title: string;
+    description: string;
+};
+
 const Home = (props: Props) => {
-    const OPTIONS: EmblaOptionsType = { loop: true };
-    const SLIDE_COUNT = 5;
-    const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
+    const OPTIONS: EmblaOptionsType = { dragFree: true, loop: true };
+   
+
     return (
         <>
             <section className=" lg:w-1/2 flex flex-col w-full h-screen px-4 sm:px-20 sticky lg:fixed lg:z-10 top-0 bg-gray-800 ">
@@ -70,12 +76,12 @@ const Home = (props: Props) => {
                     </div>
                 </div>
             </section>
-            <section className=" w-full h-screen sticky top-0 bg-gray-50 flex justify-end">
+            <section className=" w-full h-screen sticky top-0 bg-gray-900 flex justify-end">
                 <div className="lg:w-1/2 w-full">
                     <div className=" p-5 sm:p-20">
                         <div className=" flex gap-8 flex-col">
                             <Heading title="About me" />
-                            <p className=" text-lg leading-7 font-[450] font-roboto_slab">
+                            <p className=" text-gray-400 text-lg leading-7 font-[450] font-roboto_slab">
                                 One of the aspects of development that excites
                                 me the most is problem-solving. I enjoy tackling
                                 challenges head-on, whether it's debugging an
@@ -86,10 +92,10 @@ const Home = (props: Props) => {
                                 find effective solutions.
                             </p>
                             <div>
-                                <p className=" text-lg mb-1 font-[480] font-roboto_condensed">
+                                <p className=" text-gray-400 text-lg mb-1 font-[480] font-roboto_condensed">
                                     Technical
                                 </p>
-                                <p className="font-roboto_slab">
+                                <p className="font-roboto_slab text-gray-500">
                                     I specialize in front-end technologies such
                                     as HTML, CSS, and JavaScript, with expertise
                                     in modern frameworks like React.js. While my
@@ -100,10 +106,10 @@ const Home = (props: Props) => {
                                 </p>
                             </div>
                             <div>
-                                <p className=" text-lg mb-1 font-[480] font-roboto_condensed">
+                                <p className=" text-lg text-gray-400 mb-1 font-[480] font-roboto_condensed">
                                     Personal
                                 </p>
-                                <p className="font-roboto_slab">
+                                <p className="font-roboto_slab text-gray-500">
                                     I'm Thi Ha Zaw, a passionate full-stack
                                     developer based in Myanmar. With a strong
                                     inclination towards web app development, I
@@ -116,18 +122,19 @@ const Home = (props: Props) => {
                     </div>
                 </div>
             </section>
-            <section className=" w-full min-h-screen h-screen sticky top-0 bg-gray-900 flex justify-end">
-                <div className="lg:w-1/2 w-full ">
+            <section className=" w-full min-h-screen h-screen sticky top-0 bg-gray-50 flex justify-end">
+                <div className="lg:w-1/2 w-full">
                     {/* <div className=" px-0 sm:px-20 pt-10 sm:pt-20 ">
                         <Project />
                     </div> */}
-                    <div className=" p-5 sm:px-20 sm:pb-20 sm:pt-14">
+                    <div className=" p-5 sm:px-10 sm:pb-20 sm:pt-14">
                         <div className=" mb-12">
-                            <h1 className=" text-3xl font-[500] font-roboto_condensed text-gray-50">Projects</h1>
+                            <h1 className=" text-3xl font-[500] font-roboto_condensed">
+                                Projects
+                            </h1>
                         </div>
-                        <EmblaCarousel slides={SLIDES} options={OPTIONS} />
+                        <EmblaCarousel options={OPTIONS} />
                     </div>
-                   
                 </div>
             </section>
             <section className=" w-full min-h-screen h-screen sticky top-0 bg-white flex justify-end">

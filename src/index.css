@@ -5,16 +5,38 @@
 @tailwind utilities;
 
 @layer components {
-
-
     /* emble carousel */
     .embla__button {
-        @apply appearance-none bg-transparent touch-manipulation inline-flex no-underline cursor-pointer p-0 m-0 shadow shadow-gray-50  w-12 h-12 z-10 rounded-full items-center justify-center;
+        @apply active:scale-75 duration-200  bg-transparent touch-manipulation inline-flex no-underline cursor-pointer p-0 m-0 shadow border border-gray-300 w-12 h-12 z-10 rounded-full items-center justify-center;
     }
-    .embla__button:disabled {
-        @apply text-gray-400;
-    }
+
     .embla__button__svg {
-        @apply w-[35%] h-[35%] text-gray-50;
+        @apply w-[35%] h-[35%] text-gray-800;
+    }
+
+    .embla__slide__img {
+        border-radius: 1.8rem;
+        display: block;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .embla__parallax {
+        border-radius: 1.8rem;
+        height: 100%;
+        overflow: hidden;
+    }
+    .embla__parallax__layer {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .embla__parallax__img {
+        max-width: none;
+        flex: 0 0 calc(115% + (1rem * 2));
+        object-fit: cover;
     }
 }
