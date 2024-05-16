@@ -118,8 +118,14 @@ const Home = (props: Props) => {
             </section>
             <section className=" w-full min-h-screen h-screen sticky top-0 bg-gray-900 flex justify-end">
                 <div className="lg:w-1/2 w-full ">
-                    <div className=" px-0 sm:px-20 pt-10 sm:pt-20 ">
+                    {/* <div className=" px-0 sm:px-20 pt-10 sm:pt-20 ">
                         <Project />
+                    </div> */}
+                    <div className=" p-5 sm:px-20 sm:pb-20 sm:pt-14">
+                        <div className=" mb-12">
+                            <h1 className=" text-3xl font-[500] font-roboto_condensed text-gray-50">Projects</h1>
+                        </div>
+                        <EmblaCarousel slides={SLIDES} options={OPTIONS} />
                     </div>
                    
                 </div>
