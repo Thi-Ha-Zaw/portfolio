@@ -10,59 +10,28 @@ import {
     PrevButton,
     usePrevNextButtons,
 } from "./EmblaCarouselArrowButtons";
+import { Project } from "../../pages/Project";
 
-import Delivery from "../../images/devli_one.jpg";
-import TodoList from "../../images/todolist.jpg";
-import Shop from "../../images/shop.jpg";
-import News from "../../images/news.jpg";
-import ERP from "../../images/erp.jpg";
 
-import { Project } from "../../pages/Home";
+
 
 const TWEEN_FACTOR_BASE = 0.2;
 
+
 type PropType = {
+    slides: Project[];
     options?: EmblaOptionsType;
 };
 
+
+
 const EmblaCarousel: React.FC<PropType> = props => {
-    const { options } = props;
+    const { slides,options } = props;
     const [emblaRef, emblaApi] = useEmblaCarousel(options);
     const tweenFactor = useRef(0);
     const tweenNodes = useRef<HTMLElement[]>([]);
 
-    const slides: Project[] = [
-        {
-            src: Delivery,
-            title: "Delivery",
-            description:
-                "A streamlined app for tracking and managing deliveries in real-time.",
-        },
-        {
-            src: TodoList,
-            title: "Todo List",
-            description:
-                "An intuitive task management tool to help organize daily activities and projects.",
-        },
-        {
-            src: Shop,
-            title: "Shop",
-            description:
-                "A comprehensive e-commerce platform for browsing and purchasing products.",
-        },
-        {
-            src: News,
-            title: "News",
-            description:
-                "A dynamic news aggregator delivering the latest headlines and stories.",
-        },
-        {
-            src: ERP,
-            title: "ERP",
-            description:
-                "An enterprise resource planning system to optimize business processes and workflows.",
-        },
-    ];
+ 
 
     const {
         prevBtnDisabled,
@@ -146,13 +115,13 @@ const EmblaCarousel: React.FC<PropType> = props => {
         <div className="embla  max-w-[48rem] mx-auto">
             <div className="embla__viewport overflow-hidden" ref={emblaRef}>
                 <div className="embla__container flex touch-pan-y touch-pinch-zoom -ml-[1rem]">
-                    {slides.map(({ src, title, description }, index) => (
+                    {slides.map(({ src, title, description,href }, index) => (
                         <div
                             className="embla__slide flex-[0_0_70%] min-w-0 pl-[1rem]"
                             key={index}
                         >
                             <div className="embla__parallax">
-                                <div className="embla__parallax__layer relative">
+                                <a href={href} className="embla__parallax__layer relative">
                                     <img
                                         className="embla__slide__img embla__parallax__img"
                                         src={src}
@@ -166,14 +135,14 @@ const EmblaCarousel: React.FC<PropType> = props => {
                                             {description}
                                         </p>
                                     </div>
-                                </div>
+                                </a>
                             </div>
                         </div>
                     ))}
                 </div>
             </div>
 
-            <div className="embla__controls mt-[1.8rem]">
+            <div className="embla__controls mt-[1.8rem] ps-10 sm:ps-10">
                 <div className="embla__buttons flex gap-3">
                     <PrevButton
                         onClick={onPrevButtonClick}

@@ -14,29 +14,19 @@
         @apply w-[35%] h-[35%] text-gray-800;
     }
 
-    .embla__slide__img {
-        border-radius: 1.8rem;
-        display: block;
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
+
+    .embla__slide__img{
+        @apply rounded-xl sm:rounded-[1.8rem] block h-[25rem] sm:h-[22rem] w-full object-cover;
     }
 
     .embla__parallax {
-        border-radius: 1.8rem;
-        height: 100%;
-        overflow: hidden;
+        @apply rounded-xl sm:rounded-[1.8rem] h-full overflow-hidden;
     }
     .embla__parallax__layer {
-        position: relative;
-        height: 100%;
-        width: 100%;
-        display: flex;
-        justify-content: center;
+        @apply relative h-full w-full flex justify-center;
     }
     .embla__parallax__img {
-        max-width: none;
-        flex: 0 0 calc(115% + (1rem * 2));
-        object-fit: cover;
+        @apply max-w-none flex-[0_0_calc(115%_+_2rem)] object-cover;
     }
+
 }

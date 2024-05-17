@@ -1,50 +1,78 @@
-import { HoverEffect } from "../components/ui/card-hover-effect";
-import AddToCart from "../images/add-to-cart.png";
-import TodoApp from "../images/todoapp.png";
+import EmblaCarousel from "../components/carousel/EmblaCarousel";
+import { EmblaOptionsType } from "embla-carousel";
 
-const projects = [
-    {
-        title: "Stripe",
-        description:
-            "A technology company that builds economic infrastructure for the internet.",
-        image: AddToCart,
-        link: "https://stripe.com",
-    },
-    {
-        title: "Todoapp",
-        description:
-            "A platform that services your daily tasks have to be noted.",
-        image: TodoApp,
-        link: "https://react-todoapp-tsx.netlify.app",
-    },
-    {
-        title: "Google",
-        description:
-            "A multinational technology company that specializes in Internet-related services.",
-        image: AddToCart,
-        link: "https://google.com",
-    },
-    {
-        title: "Meta",
-        description:
-            "A technology company that focuses on building products that advance Facebook's mission.",
-        image: AddToCart,
-        link: "https://meta.com",
-    },
-];
+import Delivery from "../images/devli_one.jpg";
+import TodoList from "../images/todolist.jpg";
+import Shop from "../images/shop.jpg";
+import News from "../images/news.jpg";
+import ERP from "../images/erp.jpg";
 
-const Project = () => {
+type Props = {};
+
+export type Project = {
+    href: string;
+    src: string;
+    title: string;
+    description: string;
+};
+
+const Project = (props: Props) => {
+    const OPTIONS: EmblaOptionsType = { dragFree: true, loop: true };
+
+    const slides: Project[] = [
+        {
+            href : "https://react-todoapp-tsx.netlify.app",
+            src: Delivery,
+            title: "Delivery",
+            description:
+                "A streamlined app for tracking and managing deliveries in real-time.",
+        },
+        {
+            href : "https://react-todoapp-tsx.netlify.app",
+            src: TodoList,
+            title: "Todo List",
+            description:
+                "An intuitive task management tool to help organize daily activities and projects.",
+        },
+        {
+            href : "https://react-todoapp-tsx.netlify.app",
+            src: Shop,
+            title: "Shop",
+            description:
+                "A comprehensive e-commerce platform for browsing and purchasing products.",
+        },
+        {
+            href : "https://react-todoapp-tsx.netlify.app",
+            src: News,
+            title: "News",
+            description:
+                "A dynamic news aggregator delivering the latest headlines and stories.",
+        },
+        {
+            href : "https://react-todoapp-tsx.netlify.app",
+            src: ERP,
+            title: "ERP",
+            description:
+                "An enterprise resource planning system to optimize business processes and workflows.",
+        },
+    ];
     return (
-        <div className="">
-            <div>
-                <h1 className=" ps-5 sm:ps-0 text-3xl font-[500] font-roboto_condensed text-gray-300">
-                    Projects
-                </h1>
+        <section className=" w-full min-h-screen h-screen sticky top-0 bg-white flex justify-end">
+            <div className="lg:w-2/3 flex justify-end w-full">
+                <div className=" pt-20 md:pt-32 lg:py-10">
+                    <div className=" mb-12 flex flex-col gap-5 px-5 sm:px-20">
+                        <h1 className=" text-3xl font-[500] font-roboto_condensed">
+                            Projects
+                        </h1>
+                        <p className=" font-roboto_condensed text-sm text-gray-400">
+                            Swipe or Drag below to see a small selection of
+                            projects I worked on
+                        </p>
+                    </div>
+                    <EmblaCarousel slides={slides} options={OPTIONS} />
+                </div>
             </div>
-            <div className=" flex h-full items-center font-open_sans">
-                <HoverEffect items={projects} />
-            </div>
-        </div>
+        </section>
     );
 };
 
