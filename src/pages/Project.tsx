@@ -59,7 +59,7 @@ const Project = () => {
     return (
         <section className=" w-full min-h-screen h-screen sticky top-0 bg-white flex justify-end">
             <div className="lg:w-2/3 flex justify-end w-full">
-                <div className=" pt-20 md:pt-32 lg:py-10">
+                <div className=" py-10 md:pt-32 lg:py-10">
                     <div className=" mb-12 flex flex-col gap-5 px-5 sm:px-20">
                         <h1 className=" text-3xl font-[500] font-roboto_condensed">
                             Projects
