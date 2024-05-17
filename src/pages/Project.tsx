@@ -7,7 +7,7 @@ import Shop from "../images/shop.jpg";
 import News from "../images/news.jpg";
 import ERP from "../images/erp.jpg";
 
-type Props = {};
+
 
 export type Project = {
     href: string;
@@ -16,7 +16,7 @@ export type Project = {
     description: string;
 };
 
-const Project = (props: Props) => {
+const Project = () => {
     const OPTIONS: EmblaOptionsType = { dragFree: true, loop: true };
 
     const slides: Project[] = [

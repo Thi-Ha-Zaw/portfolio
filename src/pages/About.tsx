@@ -1,8 +1,8 @@
 import Heading from "../components/text/Heading";
 
-type Props = {};
 
-const About = (props: Props) => {
+
+const About = () => {
     return (
         <section className=" w-full h-screen sticky top-0 bg-gray-900 flex justify-end">
             <div className="lg:w-1/2 w-full">

@@ -4,9 +4,8 @@ import { IoMail } from "react-icons/io5";
 import Lottie from "lottie-react";
 import developerAnimation from "../data/dev-1.json";
 
-type Props = {};
 
-const Home = (props: Props) => {
+const Home = () => {
     return (
         <>
             <section className=" lg:w-1/2 flex flex-col w-full h-screen px-4 sm:px-16 lg:px-20 sticky lg:fixed lg:z-10 top-0 bg-gray-800 ">
