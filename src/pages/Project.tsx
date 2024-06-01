@@ -35,7 +35,7 @@ const Project = () => {
                 "An intuitive task management tool to help organize daily activities and projects.",
         },
         {
-            href : "https://react-todoapp-tsx.netlify.app",
+            href : "https://react-ecommerce-tsx.netlify.app/",
             src: Shop,
             title: "Shop",
             description:
@@ -49,7 +49,7 @@ const Project = () => {
                 "A dynamic news aggregator delivering the latest headlines and stories.",
         },
         {
-            href : "https://react-todoapp-tsx.netlify.app",
+            href : "https://i-sonic-erp.vercel.app",
             src: ERP,
             title: "ERP",
             description:
